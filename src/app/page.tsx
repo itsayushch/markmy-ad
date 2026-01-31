@@ -22,7 +22,7 @@ export default function Home() {
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
 
   return (
-    <div className="flex h-screen bg-gray-50">
+    <div className="flex min-h-[100dvh] bg-gray-50">
       {/* Sidebar */}
       <Sidebar />
 
@@ -47,7 +47,7 @@ export default function Home() {
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 flex flex-col overflow-hidden min-h-0">
+      <div className="flex-1 flex flex-col min-h-0">
         {/* Header */}
         <DashboardHeader onMenuClick={() => setMobileSidebarOpen(true)} />
 
