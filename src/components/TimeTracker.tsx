@@ -2,7 +2,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Clock, Pause, ChevronDown, Calendar, MoreVertical } from "lucide-react";
+import { Clock, Pause, Play, ChevronDown, Calendar, MoreVertical } from "lucide-react";
 import { useState, useEffect } from "react";
 
 export function TimeTracker() {
@@ -84,9 +84,13 @@ export function TimeTracker() {
                 onClick={() => setIsRunning(!isRunning)}
               >
                 <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-white/20 mr-2">
-                  <Pause size={12} className="fill-white" />
+                  {isRunning ? (
+                    <Pause size={12} className="text-white" />
+                  ) : (
+                    <Play size={12} className="text-white" />
+                  )}
                 </span>
-                {isRunning ? 'Pause' : 'Resume'}
+                {isRunning ? "Pause" : "Resume"}
               </Button>
               <Button 
                 variant="outline" 

@@ -22,7 +22,7 @@ export default function Home() {
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
 
   return (
-    <div className="flex min-h-[100dvh] bg-gray-50">
+    <div className="flex h-screen bg-gray-50">
       {/* Sidebar */}
       <Sidebar />
 
@@ -47,13 +47,13 @@ export default function Home() {
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 flex flex-col min-h-0">
+      <div className="flex-1 flex flex-col overflow-hidden min-h-0">
         {/* Header */}
         <DashboardHeader onMenuClick={() => setMobileSidebarOpen(true)} />
 
         {/* Dashboard Content */}
         <main className="flex-1 overflow-y-auto min-h-0">
-          <div className="p-4 sm:p-6 space-y-6">
+          <div className="p-4 sm:p-6 space-y-6 pb-20 sm:pb-6">
             {/* Page Title */}
             <Card className="rounded-xs border border-gray-200 shadow-sm">
               <CardHeader className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
